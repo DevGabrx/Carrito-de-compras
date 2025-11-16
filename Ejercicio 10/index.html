@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/img/favicon.png" type="image/png" />
+
+    <!--Iconos de boopstrap-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <p class="cursor typewriter-animation">
+          Bienvenidos a la Tienda  Agustiniana
+        </p>
+        
+        <div>
+          <i class="bi bi-cart"> <span id="carrito-contador"> 0</span></i>
+
+        </div>
+          
+        
+      </nav>
+    </header>
+
+    <main>
+      <div id="productosGrid"></div>
+      <div id="carrito-contenedor"></div>
+
+      <div id="Factura">
+
+        <button id="descuento" onclick="descuento()">¿Quieres aplicar duescuento?</button>
+
+      </div>
+    </main>
+
+    <script src="ejercicio10.js"></script>
+  </body>
+</html>

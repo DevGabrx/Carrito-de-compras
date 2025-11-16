@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica;
+}
+
+header {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.219);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 45px;
+}
+
+#carrito-contador{
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #fca311;
+    border-radius: 30%;
+    padding: 2px 6px;
+    color: white;
+    text-align: center;
+
+}
+
+
+/* Cursor */
+.cursor {
+    padding-top: 20px;
+    position: relative;
+    width: 100px;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+.typewriter-animation {
+    animation: typewriter 1.5s steps(50) 1s 1 normal both,
+        blinkingCursor 500ms steps(50) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 525px;
+    }
+}
+
+@keyframes blinkingCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+#productosGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+#botonAgregar {
+    padding: 10px;
+    background-color: #fca311;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#botonAgregar:hover {
+    background-color: #e59500;
+    color: white;
+    transition: 0.3s;
+}
+
+.producto {
+    border: 1px solid #000000;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#carrito-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #d10e0ec5;
+}
