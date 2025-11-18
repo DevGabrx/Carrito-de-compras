@@ -33,7 +33,7 @@ function cargarProductos() {
             <h3>${producto.nombre}</h3>
             <p>Precio: $${producto.precio}</p>
             <p>Categoría: ${producto.categoria}</p>
-            <img src=${producto.imagen} width="200px" height="200px">
+            <img src=${producto.imagen} width="150px" height="150px">
             
             <button onclick="agregarAlCarrito('${index}')" id="botonAgregar">Agregar al carrito</button>     
         </div>

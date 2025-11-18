@@ -136,3 +136,42 @@ h2{
 a{
     color: white;
 }
+
+/* Responsive styles */
+
+@media (max-width: 600px) {
+    nav {
+        margin: 10px 12px;
+    }
+    .cursor {
+        width: 60px;
+        font-size: 20px;
+        border-right-width: 1px;
+    }
+    #productosGrid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 12px;
+        padding: 12px;
+    }
+    .producto {
+        padding: 10px;
+    }
+    #botonAgregar, #descuento {
+        padding: 8px 10px;
+        font-size: 14px;
+        border-radius: 20px;
+    }
+    #factura {
+        width: 95%;
+        padding: 12px;
+    }
+    #carrito-contenedor {
+        margin: 20px 0;
+    }
+    h2 {
+        font-size: 1.1rem;
+    }
+    a {
+        font-size: 14px;
+    }
+}
