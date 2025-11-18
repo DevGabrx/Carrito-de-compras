@@ -10,14 +10,14 @@ class Producto {
 } 
 
 let productosDisponibles = [
-  { id: 1, nombre: "Laptop Gaming", precio: 1500, categoria: "Electrónica", imagen: "/img/pcgamer.png" },
-  { id: 2, nombre: "Smartphone", precio: 800, categoria: "Electrónica", imagen: "/img/phone.png" },
-  { id: 3, nombre: "Auriculares Bluetooth", precio: 150, categoria: "Electrónica", imagen: "/img/audifonos.png" },
-  { id: 4, nombre: "Camiseta Deportiva", precio: 25, categoria: "Ropa", imagen: "/img/camisadeportiva.png" },
-  { id: 5, nombre: "Zapatillas Running", precio: 120, categoria: "Ropa", imagen: "/img/zapatilla.png" },
-  { id: 6, nombre: "Silla Oficina", precio: 200, categoria: "Hogar", imagen: "/img/sillagamer.png" },
-  { id: 7, nombre: "Jersey NBA", precio: 45, categoria: "Ropa", imagen: "/img/jerseynba.png" },
-  { id: 8, nombre: "Pelota Fútbol", precio: 30, categoria: "Deportes", imagen: "/img/brazuca.png" }
+  { id: 1, nombre: "Laptop Gaming", precio: 1500, categoria: "Electrónica", imagen: "img/pcgamer.png" },
+  { id: 2, nombre: "Smartphone", precio: 800, categoria: "Electrónica", imagen: "img/phone.png" },
+  { id: 3, nombre: "Auriculares Bluetooth", precio: 150, categoria: "Electrónica", imagen: "img/audifonos.png" },
+  { id: 4, nombre: "Camiseta Deportiva", precio: 25, categoria: "Ropa", imagen: "img/camisadeportiva.png" },
+  { id: 5, nombre: "Zapatillas Running", precio: 120, categoria: "Ropa", imagen: "img/zapatilla.png" },
+  { id: 6, nombre: "Silla Oficina", precio: 200, categoria: "Hogar", imagen: "img/sillagamer.png" },
+  { id: 7, nombre: "Jersey NBA", precio: 45, categoria: "Ropa", imagen: "img/jerseynba.png" },
+  { id: 8, nombre: "Pelota Fútbol", precio: 30, categoria: "Deportes", imagen: "img/brazuca.png" }
 ];
 
 productosAdquiridos = [];
