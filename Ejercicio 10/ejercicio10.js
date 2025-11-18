@@ -1,12 +1,13 @@
+//Implemente esta clase para crear los productos
 class Producto {
-  constructor(id, nombre, precio, categoria, img) {
+  constructor(id, nombre, precio, categoria, imagen) {
     this.id = id;
     this.nombre = nombre;
     this.precio = precio;
     this.categoria = categoria;
-    this.img = img;
+    this.imagen = imagen;
   }
-} //Implemente esta clase para crear los productos
+} 
 
 let productosDisponibles = [
   { id: 1, nombre: "Laptop Gaming", precio: 1500, categoria: "Electrónica", imagen: "/img/pcgamer.png" },
@@ -20,6 +21,8 @@ let productosDisponibles = [
 ];
 
 productosAdquiridos = [];
+const carritoContenedor = document.getElementById("carrito-contenedor");
+let total = 0;
 
 function cargarProductos() {
   const productosGrid = document.getElementById("productosGrid");
@@ -47,9 +50,10 @@ function AgregarProducto(objetoProducto){
 
 const NuevoProducto = new Producto(9, "Escritorio", 300, "Muebles", "404");
 AgregarProducto(NuevoProducto)
+////////////////////////////////////////////////////////////////////////////////
 
-//Array con los productos adquiridos
 
+//Funcion Principal 
 function agregarAlCarrito(index) {
   alert(`Se ha agregado al carrito :
   ${productosDisponibles[index].nombre}
@@ -64,20 +68,29 @@ function agregarAlCarrito(index) {
     0
   );
 
-  //Calcular el producto mas caro
+  //5.-Calcular el producto mas caro
 
-  /*let Categoria = productosAdquiridos.filter(
-    (producto) => producto.categoria === prompt("Ingrese la categoria")
-  );
-  console.log(Categoria);*/
+  let productoMasCaro = productosAdquiridos.reduce((acumulador, producto) => {
+    if (acumulador > producto.precio) {
+      return acumulador;
+    } else {
+      return producto.precio;
+    }
+  }, 0);
 
-  const carritoContenedor = document.getElementById("carrito-contenedor");
-  carritoContenedor.innerHTML = `<p> Total a Pagar : ${total}</p>`;
+  //Mostrar en la pagina el contenido del carrito
+ 
+  carritoContenedor.innerHTML = `<div id ="factura">
+  <h2>Factura</h2>
+  <p> Total a Pagar : ${total}</p>
+  <p> Productos adquiridos : ${productosAdquiridos.length}</p>
+  <p> Producto mas caro : ${productoMasCaro}</p>
+  <button id="descuento" onclick="descuento()">¿Quieres aplicar descuento?</button>
+  </div>`;
 
-  cuantosProductos();
-  descuento(total)
-  factura()
+cuantosProductos();
 }
+
 
 
 //¿Cuantos productos Hay?
@@ -87,23 +100,16 @@ function cuantosProductos() {
 }
 
 
-
-//Practicamente todo lo estoy manejando con el indice del producto 
-function factura(productosAdquiridos){
-
-  const factura = document.getElementById('factura');
-  factura.innerHTML = `<p> ${productosAdquiridos[index]}</p>`
-}
-
+//NO FUNCIONA 
 function descuento(total){
-  const porcentaje  = parseInt(prompt("Ingresa un descuento 1-100"))
-
-  if(porcentaje  <0 || porcentaje  >100){
-    alert("Ingresaste un descuento que no es  invalido")
-  }
-
-  const descuento = (porcentaje / 100) * total
+  const porcentaje = parseInt(prompt("Ingrese un descuento"))
+  descuento = (porcentaje / 100) * total;
+  totalConDescuento = total - descuento;
+  console.log(totalConDescuento)
 }
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
